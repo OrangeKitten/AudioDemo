@@ -32,8 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSongs"
         android:layout_width="0dp"
@@ -42,10 +40,26 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/audioVisualizer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNowPlaying"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- 音频可视化视图 - 移到歌曲列表和控制区域之间 -->
+    <com.example.audiodemo.AudioVisualizerView
+        android:id="@+id/audioVisualizer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#1A000000"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutControls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNowPlaying" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewSongs"
+        app:layout_constraintHeight_percent="0.25" />
 
     <LinearLayout
         android:id="@+id/linearLayoutControls"
